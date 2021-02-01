@@ -12,21 +12,23 @@ typedef struct StudentInfo {
 
 int main() {
 
-	Student *head = malloc(sizeof(*head));
-			
+	//Student *head = malloc(sizeof(*head));
+	Student *head = calloc(1, sizeof(*head));
+
 	Student *tmp = head;
 
 	for(int i=0; i<SIZE; i++) {
 		scanf("%s", tmp->name);
 		scanf("%d", &tmp->age);
 
-		tmp->next = malloc(sizeof(*head));
+		//tmp->next = malloc(sizeof(*head));
+		tmp->next = calloc(1, sizeof(*head));
 		tmp = tmp->next;
 	}
 
 	tmp = head;
 
-	while(tmp != NULL){
+	while(tmp->next != NULL){
 		printf("%s\n",tmp->name);
 		printf("%d\n",tmp->age);
 		tmp = tmp->next;

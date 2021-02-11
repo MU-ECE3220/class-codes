@@ -1,0 +1,24 @@
+#include "const_functions.h"
+
+// const type == type const
+// const int* ==> is a pointer to a constant int
+// char const* ==> is a pointer to a constant int
+// char* const ==> is a constant pointer to a (mutable) int
+
+int sum_from_1_to_n (const int n) {
+	int sum=0;
+	
+	int *a;
+	a = &n;
+	*a = 5;
+	for(int i=1; i<=n; i++) {
+		sum = sum + i;
+	}
+	return sum;
+}
+
+char *path="/files";
+
+const int write_to_file() {
+	return 0;
+}

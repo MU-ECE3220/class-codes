@@ -61,8 +61,8 @@ class Student {
 		
 		// Destructor
 		~Student() { 
-			cout << "Destructor triggered!\n";
-			cout << this->name << "\n";
+			cout << "Destructor triggered for " << this->name << endl;
+			cout << "Destructor triggered for " << name << endl;
 		}
 };
 
@@ -82,7 +82,9 @@ int main () {
 	cout << s3.getName() << ", " << s3.getAge() << endl;	
 	cout << s3.name << ", " << s3.age << s3.getSSN() << endl;
 
-
+	
+	//s1->~Student();
+	delete s1; // free(s1);
 
 
 	return 0;

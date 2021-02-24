@@ -5,7 +5,8 @@ int main () {
 
 	string data;
 	cout << "Enter file name with extension: ";
-	cin >> data;
+	//cin >> data;
+	getline(cin, data);
 	cout << "File name is: " << data << endl;
 
 	FileIO file_obj;

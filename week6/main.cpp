@@ -10,7 +10,18 @@ int main () {
 	cout << "File name is: " << data << endl;
 
 	FileIO file_obj;
-	file_obj.writeFile(data);
+	if(file_obj.writeFile(data)) {
+		cout << "File created successfully!\n"; 	
+	}
+	else {
+		cout << "File operation failed!\n";
+	}
+	file_obj.readFile(data);
+
+
+	file_obj.readAndAddNumbersFromFile("integers.txt"); // Will prompt an error message
+	file_obj.readAndAddNumbersFromFile("numbers.txt"); // Will run successfully
+
 
 	Student *s1 = new Student("Ekin", 20);
 	// endl == "\n"
@@ -31,6 +42,6 @@ int main () {
 
 	delete s1; // free(s1);
 
-
 	return 0;
 }
+

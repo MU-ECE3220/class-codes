@@ -54,31 +54,3 @@ Student::~Student() {
 	cout << "Destructor triggered for " << name << endl;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

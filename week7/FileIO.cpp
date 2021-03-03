@@ -5,7 +5,7 @@ bool FileIO::readFile() {
 	my_file.open(this->filename);
 	string data;
 	if(!my_file) {
-		cerr << "Cannot open file\n";
+		cerr << "Cannot open file "<< this->filename << "\n";
 		return false;
 	}
 
@@ -15,9 +15,9 @@ bool FileIO::readFile() {
 	return true;
 }
 
-bool FileIO::writeFile(string file) {
+bool FileIO::writeFile() {
 	ofstream my_file;
-	my_file.open(file);
+	my_file.open(filename);
 	if(my_file) {
 		my_file << "Die, DIE. Why won't you die\n";
 		my_file << "Beneath this mask there is more than flesh, Beneath this mask there is an idea, Mr. Creedy, and ideas are bulletproof.\n";
@@ -69,5 +69,13 @@ bool FileIO::readAndAddNumbersFromFile(string filename) {
 		number = "";
 	}
 	return true;
+}
+
+void FileIO::setFileName(string filename) {
+	this->filename = filename;
+}
+
+string FileIO::getFileName() {
+	return filename;
 }
 

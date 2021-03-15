@@ -37,12 +37,16 @@ int Student::getAge() {
 // Default constructor
 Student::Student() {
 	// Call the Single object and read function here
+	cout<< "Student: "<< name << endl;
+	Singleton::getInstance()->getFile().readFile();
 }
 
 // Parameterized Constuctor
 Student::Student(string name, int age) {
 	this->name = name;
 	this->age = age;
+	cout<< "Student: "<< name << endl;
+	Singleton::getInstance()->getFile().readFile();
 }
 
 // Copy constructor

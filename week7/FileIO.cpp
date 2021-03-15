@@ -11,7 +11,8 @@ bool FileIO::readFile() {
 
 	while(getline(my_file, data)){
 		cout << data << endl;
-	}	
+	}
+	my_file.close();	
 	return true;
 }
 

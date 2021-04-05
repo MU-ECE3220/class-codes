@@ -18,7 +18,7 @@ class C: public A, public B {
 		C(){  cout << "Class C's constructor is called" << endl;  } 
 		void print()
 		{
-			cout << "Value is: " << B::x <<endl;
+			cout << "Value is: " << x <<endl;
 		}
 }; 
    

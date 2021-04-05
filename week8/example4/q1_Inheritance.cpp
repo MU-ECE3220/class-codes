@@ -6,12 +6,12 @@ class A {
      A(){ cout << "Class A's constructor is called" << endl;  } 
 }; 
    
-class B { 
+class B : public A { 
  public: 
      B(){ cout << "Class B's constructor is called" << endl;  } 
 }; 
    
-class C: public B, public A { 
+class C: public A, public B { 
    public: 
      C(){  cout << "Class C's constructor is called" << endl;  } 
 }; 

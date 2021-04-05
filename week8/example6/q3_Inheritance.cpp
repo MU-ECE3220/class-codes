@@ -13,21 +13,18 @@ class Parent {
   
 class Child : public Parent { 
 	public: 	
-		virtual string print()
+		string print()
 		{ 
 			return "This is Child class"; 
 		} 
 }; 
   
-void describe(Parent c) {
-	cout << c.print() << endl;
+void describe(Parent *c) {
+	cout << c->print() << endl;
 } 
   
-int main() { 
-	Parent p; 
-	Child c;
-	
-	describe(p); 
+int main() {  
+	Child *c = new Child();
 	describe(c); 
 	return EXIT_SUCCESS;
 } 

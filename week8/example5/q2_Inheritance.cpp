@@ -9,7 +9,7 @@ class A {
    
 class B : public A { 
 	public: 
-		//void print() { cout <<"I am in Class B" << endl; } 
+		void print() { cout <<"I am in Class B" << endl; } 
 }; 
    
 class C: public B { 

@@ -38,7 +38,10 @@ class C : public A, public B {
 };
 
 int main() {
-	C c;
-	c.print();
+	Child *c = new Child();	
+	Parent *p;
+	p = c;
+	delete p;
+	return 0;
 	return EXIT_SUCCESS;
 }

@@ -7,6 +7,9 @@ class Parent {
 		Parent(){
 			cout << "Parent Constructor" << endl;
 		}
+		virtual ~Parent(){
+			cout << "Destructing Parent" << endl;
+		}
 		void print(){
 			cout << "Parent Constructor" << endl;
 		}
@@ -37,10 +40,5 @@ class C : public A, public B {
 int main() {
 	C c;
 	c.print();
+	return EXIT_SUCCESS;
 }
-
-
-
-
-
-

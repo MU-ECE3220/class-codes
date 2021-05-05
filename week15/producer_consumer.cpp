@@ -91,7 +91,15 @@ void *producer(void *arg) {
 		int producer_id = *((int *)arg);
 		data = (rand() % 10) + 50;
 
-		pthread_mutex_lock(&isEmpty);
+		while(1) {
+			if(pthread_mutex_lock(&isEmpty) == 0) {
+				cout<< "SUCCESS" << endl;
+				break;
+			}
+			else {
+				cout<< "Ooops maybe next time " << producer_id << "..." << endl;
+			}
+		}
 
 		index = findFree();
 		
@@ -124,15 +132,4 @@ void *consumer(void *arg) {
 
 	} while(1);
 }
-
-
-
-
-
-
-
-
-
-
-
 
